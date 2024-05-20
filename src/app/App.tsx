@@ -4,6 +4,7 @@ import './App.css';
 import { Link, Route, Switch, useLocation } from "react-router-dom";
 import Header from './components/header';
 import { Banner } from './components/banner';
+import { HomePage } from './screens/home';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       <Header/>
       <Switch>
         <Route path="/">
-          Home
+          <HomePage />
         </Route>
       </Switch>
     </div>

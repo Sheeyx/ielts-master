@@ -1,0 +1,41 @@
+.learning-tips {
+  background-color: #e1cdf2;
+  margin-top: 120px;  
+  padding: 60px 0 20px 0;
+
+  .inner-box {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+    margin-bottom: 20px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    img {
+      margin-right: 10px;
+    }
+
+    .title {
+      color: #030303;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 26px;
+      margin-bottom: 6px;
+    }
+
+    .text {
+      color: #030303;
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}
+
+
+
+
+

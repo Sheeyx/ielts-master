@@ -2,7 +2,7 @@
   background-color: #e1cdf2;
   margin-top: 120px;  
   padding: 60px 0 20px 0;
-
+  
   .inner-box {
     display: flex;
     align-items: center;
@@ -20,6 +20,7 @@
     }
 
     .title {
+      font-family: "Montserrat";
       color: #030303;
       font-size: 20px;
       font-weight: 700;
@@ -30,6 +31,7 @@
     .text {
       color: #030303;
       font-size: 16px;
+      font-family: "Montserrat";
       line-height: 21px;
     }
   }

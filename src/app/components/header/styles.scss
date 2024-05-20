@@ -1,0 +1,22 @@
+.header {
+    width: 100%;
+    height: 60px;
+    background: #fff !important;
+
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .logo {
+            margin-right: 10px;
+        }
+    
+        .logo-txt {
+            color: #000;
+            text-decoration: none;
+        }
+    }
+
+   
+}

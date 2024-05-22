@@ -3,6 +3,7 @@ import { HeroSection } from "./components/HeroSection";
 import { LearningTips } from "./components/learningTips";
 import { Community } from "./components/community";
 import { BestEssays } from "./components/bestEssays";
+import { PracticeMaterials } from "./components/materials";
 // import { Essays } from "./essays";
 
 export function HomePage(){
@@ -12,6 +13,7 @@ export function HomePage(){
         <LearningTips/>
         <Community/>
         <BestEssays/>
+        <PracticeMaterials/>
       </div>
     )
     

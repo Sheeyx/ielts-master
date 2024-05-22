@@ -1,0 +1,29 @@
+.community {
+    background-color: #e1cdf2;
+    margin-top: 100px;
+    padding: 60px 0;
+
+    .head-text {
+        color: #030303;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 32px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .card {
+        background-color: #f0f0f0;
+        border-radius: 24px;    
+        padding: 32px 24px;
+        width: 200px;
+        margin: 12px 12px;
+
+        .prof {
+            color: #030303;
+            font-size: 14px;
+            font-family: "Montserrat";
+            line-height: 18px;
+        }
+    }
+}

@@ -1,7 +1,5 @@
 import React from 'react';
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import QuoteIcon from '../../../../../assets/icons/quote.svg';
-import Avatar from '../../../../../assets/photo/avatar.png';
 import "./styles.scss";
 
 export function BestEssays() {

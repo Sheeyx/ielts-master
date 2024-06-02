@@ -5,6 +5,7 @@ import { Link, Route, Switch, useLocation } from "react-router-dom";
 import Header from './components/header';
 import { Banner } from './components/banner';
 import { HomePage } from './screens/home';
+import ListeningSection from './screens/listening';
 
 
 function App() {
@@ -13,6 +14,9 @@ function App() {
       <Banner />
       <Header/>
       <Switch>
+        <Route path="/listening">
+          <ListeningSection />
+        </Route>
         <Route path="/">
           <HomePage />
         </Route>

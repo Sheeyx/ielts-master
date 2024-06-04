@@ -9,6 +9,7 @@ import theme from './app/MaterialTheme';
 import { ThemeProvider } from '@emotion/react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { BrowserRouter as Router } from "react-router-dom";
+import ContextProvider from './app/context/ContextProvider';
 
 
 const container = document.getElementById('root')!;
@@ -17,13 +18,15 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      < ThemeProvider theme={theme}>
-        <CssBaseline>
-          <Router>
-              <App />
-          </Router>
-        </CssBaseline>
-      </ThemeProvider>
+      <ContextProvider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline>
+            <Router>
+                <App />
+            </Router>
+          </CssBaseline>
+        </ThemeProvider>
+      </ContextProvider>
     </Provider>
   </React.StrictMode>
 );

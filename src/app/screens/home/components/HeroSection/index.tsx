@@ -1,9 +1,13 @@
 import React from 'react';
-import { Button, Container, Stack, Typography } from "@mui/material";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import ieltsPhoto from '../../../../../assets/photo/Image.png';
 import "./styles.scss";
+import { useGlobals } from '../../../../hooks/useGlobals';
 
-export function HeroSection() {
+export function HeroSection(props: any) {
+   const { setSignupOpen } = props;
+   const { authMember } = useGlobals();
+
     return (
         <div className='hero-section'>
             <Stack>
@@ -15,9 +19,18 @@ export function HeroSection() {
                         </Typography>
                     </Stack>
                     <Stack sx={{ justifyContent: "center", alignItems: "center" }}>
-                        <Button className={'btn'}>
-                            Explore now
-                        </Button>
+                    <Box className={"signup"}>
+                        {!authMember ? (
+                            <Button 
+                                variant={"contained"} 
+                                sx={{width: "200px", height: "50px"}}
+                                className={"signup-button"}
+                                onClick={() => setSignupOpen(true)}
+                                >
+                                SIGN UP
+                            </Button>
+                        ) : null}
+                        </Box>
                     </Stack>
                 </Container>
             </Stack>

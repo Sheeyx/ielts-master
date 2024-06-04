@@ -6,10 +6,10 @@ import { BestEssays } from "./components/bestEssays";
 import { PracticeMaterials } from "./components/materials";
 // import { Essays } from "./essays";
 
-export function HomePage(){
+export function HomePage(props :any){
     return (
       <div className="home-page">
-        <HeroSection/>
+        <HeroSection setSignupOpen={props.setSignupOpen}/>
         <LearningTips/>
         <Community/>
         <BestEssays/>

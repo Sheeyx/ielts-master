@@ -16,6 +16,7 @@ import Logo from "../../../assets/icons/logo.svg";
 import "./styles.scss"
 import { Stack } from '@mui/material';
 import { useGlobals } from '../../hooks/useGlobals';
+import { Link } from 'react-router-dom';
 
 const pages = ['HOME', 'Listening', 'Reading', 'Writing', 'Speaking'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -112,7 +113,7 @@ function Header(props: HeaderNavbarProps) {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Link to={`/${page.toLowerCase()}`}>{page} hefs</Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -138,13 +139,14 @@ function Header(props: HeaderNavbarProps) {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
             {pages.map((page) => (
-              <Button
+              <Link
+                className='nav-links'
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block' }}
+                to={`/${page.toLowerCase()}`}
               >
-                {page}
-              </Button>
+                {page.toUpperCase()}
+              </Link>
             ))}
           </Box>
 

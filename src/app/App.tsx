@@ -10,6 +10,7 @@ import AuthenticationModal from './components/auth';
 import { sweetErrorHandling, sweetTopSmallSuccessAlert } from './lib/sweetAlert';
 import { useGlobals } from './hooks/useGlobals';
 import { Messages } from './lib/config';
+import WritingSection from './screens/home/writing';
 
 
 
@@ -46,6 +47,9 @@ function App() {
         handleLogoutRequest={handleLogoutRequest}
       />
       <Switch>
+      <Route path="/writing">
+          <WritingSection />
+        </Route>
         <Route path="/listening">
           <ListeningSection />
         </Route>

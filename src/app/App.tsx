@@ -5,12 +5,16 @@ import { Link, Route, Switch, useLocation } from "react-router-dom";
 import Header from './components/header';
 import { Banner } from './components/banner';
 import { HomePage } from './screens/home';
-import ListeningSection from './screens/listening';
 import AuthenticationModal from './components/auth';
 import { sweetErrorHandling, sweetTopSmallSuccessAlert } from './lib/sweetAlert';
 import { useGlobals } from './hooks/useGlobals';
 import { Messages } from './lib/config';
 import WritingSection from './screens/home/writing';
+import ListeningDetail from './screens/listening/components/listening-detail';
+import ListeningPage from './screens/listening';
+import AnswersPage from './screens/listening/components/PracticePage/components/AnswersPage';
+import ReadingPage from './screens/reading';
+// import Speaking from './screens/speaking';
 
 
 
@@ -51,7 +55,16 @@ function App() {
           <WritingSection />
         </Route>
         <Route path="/listening">
-          <ListeningSection />
+          <ListeningPage />
+        </Route>
+        <Route path="/listening/practice/answers">
+          <AnswersPage />
+        </Route>
+        <Route path="/reading">
+          <ReadingPage />
+        </Route>
+        <Route path="/speaking">
+          {/* <Speaking /> */}
         </Route>
         <Route path="/">
           <HomePage 
